@@ -4,7 +4,7 @@
     background: rgb(0, 0, 0);
     padding: 1rem;
     border-radius: 20px;
-    margin: 3rem auto;
+    margin: 3rem auto;                                      /*using rem we can give responsive margin*/
     width:fit-content;
     box-shadow: rgba(0, 0, 0, 0.5) 10px 10px 20px;
 }

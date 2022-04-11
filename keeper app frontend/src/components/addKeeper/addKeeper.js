@@ -12,14 +12,15 @@ const AddKeeper = ({ setKeeperList }) => {
     const handleChange = e => {
         const { name, value } = e.target
         setKeeperObj({
-            ...keeperObj,
-            [name]: value
+            ...keeperObj,                   
+            [name]: value                               //here now we will asign the value to the targeted state variable
         })
     }
 
+    //When (Add) button is clicked this function will going to be run
     const add = () => {
         if(keeperObj.title) {
-            axios.post("http://localhost:3001/api/addNew", keeperObj)
+            axios.post("http://localhost:3001/api/addNew", keeperObj)       //using axios sending post request to api url
             .then(res => setKeeperList(res.data))
             setKeeperObj({
                 title: "",
